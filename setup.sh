@@ -1,8 +1,4 @@
 #!/bin/bash
 
-FILES=(.vim .vimrc)
-
-for file in ${FILES[@]}
-do
-    ln -s $HOME/dotfiles/$file $HOME/$file
-done
+ln -s $HOME/dotfiles/.vim $HOME/.vim
+ln -s $HOME/dotfiles/.vimrc $HOME/.vimrc
