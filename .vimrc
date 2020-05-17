@@ -57,6 +57,8 @@ autocmd filetype cpp nnoremap <F6> :!./%:r <CR>
 " cppファイルをF7でコピペしやすいようにコンソールにコードを表示
 autocmd filetype cpp nnoremap <F7> :!cat % <CR>
 
+let g:airline_theme='simple'
+
 set nocompatible
 filetype off
 set rtp=~/.vim/bundle/Vundle.vim
@@ -65,6 +67,9 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'twitvim/twitvim'
 Plugin 'moll/vim-node'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 call vundle#end()
 filetype plugin indent on
