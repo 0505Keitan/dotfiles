@@ -45,6 +45,8 @@ set shiftwidth=2
 " 行末で->を押すと次の行
 set whichwrap=b,s,[,],<,>
 
+set encoding=UTF-8
+
 " cppファイルをF4でコンパイルする
 autocmd filetype cpp nnoremap <F4> :!g++ % -std=gnu++1y -O2 -o %:r <CR>
 
@@ -67,9 +69,11 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'twitvim/twitvim'
 Plugin 'moll/vim-node'
+Plugin 'tpope/vim-markdown'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'ryanoasis/vim-devicons'
 
 call vundle#end()
 filetype plugin indent on
