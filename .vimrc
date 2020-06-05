@@ -47,18 +47,6 @@ set whichwrap=b,s,[,],<,>
 
 set encoding=UTF-8
 
-" cppファイルをF4でコンパイルする
-autocmd filetype cpp nnoremap <F4> :!g++ % -std=gnu++1y -O2 -o %:r <CR>
-
-" cppファイルをF5でコンパイルして実行までする
-autocmd filetype cpp nnoremap <F5> :!g++ % -std=gnu++1y -O2 -o %:r ; ./%:r <CR>
-
-" F6で実行だけする
-autocmd filetype cpp nnoremap <F6> :!./%:r <CR>
-
-" cppファイルをF7でコピペしやすいようにコンソールにコードを表示
-autocmd filetype cpp nnoremap <F7> :!cat % <CR>
-
 let g:airline_theme='simple'
 
 set nocompatible
