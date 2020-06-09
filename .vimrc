@@ -47,17 +47,16 @@ set whichwrap=b,s,[,],<,>
 
 set encoding=UTF-8
 
-" cppファイルをF4でコンパイルする
-autocmd filetype cpp nnoremap <F4> :!g++ % -std=gnu++1y -O2 -o %:r <CR>
+" guifontを設定しないと文字化けになるらしい
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
 
-" cppファイルをF5でコンパイルして実行までする
-autocmd filetype cpp nnoremap <F5> :!g++ % -std=gnu++1y -O2 -o %:r ; ./%:r <CR>
-
-" F6で実行だけする
-autocmd filetype cpp nnoremap <F6> :!./%:r <CR>
-
-" cppファイルをF7でコピペしやすいようにコンソールにコードを表示
-autocmd filetype cpp nnoremap <F7> :!cat % <CR>
+" フォルダアイコンを表示
+let g:WebDevIconsNerdTreeBeforeGlyphPadding = ""
+let g:WebDevIconsUnicodeDecorateFolderNodes = v:true
+" after a re-source, fix syntax matching issues (concealing brackets):
+if exists('g:loaded_webdevicons')
+  call webdevicons#refresh()
+endif
 
 let g:airline_theme='simple'
 
@@ -68,12 +67,12 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'twitvim/twitvim'
-Plugin 'moll/vim-node'
-Plugin 'tpope/vim-markdown'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'w0ng/vim-hybrid'
+Plugin 'preservim/nerdtree'
 
 call vundle#end()
 filetype plugin indent on
