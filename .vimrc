@@ -47,6 +47,9 @@ set whichwrap=b,s,[,],<,>
 
 set encoding=UTF-8
 
+" デフォルトでツリー表示
+autocmd VimEnter * execute 'NERDTree'
+
 " guifontを設定しないと文字化けになるらしい
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
 
